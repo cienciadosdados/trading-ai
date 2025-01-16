@@ -1,114 +1,106 @@
 # AI Trading Agent 🤖
-This is a proof of conncept AI financial agent.  The goal of this project is to explore the use of AI for investment research.  This project is for **educational** purposes only and is not intended for real trading or investment.
+Este é um agente financeiro de IA como prova de conceito. O objetivo deste projeto é explorar o uso de IA para pesquisa de investimentos. Este projeto é destinado apenas para fins educacionais e não é indicado para negociações ou investimentos reais.
 
-👋 **Demo**: You can use a live demo of this project [here](https://chat.financialdatasets.ai/).
+👋 Demo: Você pode acessar uma demonstração ao vivo deste projeto aqui.
 
-<img width="1709" alt="Screenshot 2025-01-06 at 5 53 59 PM" src="https://github.com/user-attachments/assets/7ef1729b-f2e1-477c-99e2-1184c1bfa1cd" />
+<img width="1709" alt="Captura de tela em 2025-01-06 às 17:53:59" src="https://github.com/user-attachments/assets/7ef1729b-f2e1-477c-99e2-1184c1bfa1cd" />
+Aviso Legal
+Este projeto é apenas para fins educacionais e de pesquisa.
 
-## Disclaimer
+Não é indicado para negociações ou investimentos reais.
+Nenhuma garantia ou responsabilidade é fornecida.
+Desempenhos passados não indicam resultados futuros.
+O criador não assume responsabilidade por perdas financeiras.
+Consulte um consultor financeiro para decisões de investimento.
+Ao utilizar este software, você concorda em usá-lo exclusivamente para fins de aprendizado.
 
-This project is for **educational and research purposes only**.
-
-- Not intended for real trading or investment
-- No warranties or guarantees provided
-- Past performance does not indicate future results
-- Creator assumes no liability for financial losses
-- Consult a financial advisor for investment decisions
-
-By using this software, you agree to use it solely for learning purposes.
-
-## Table of Contents 📖
-- [Features](#features)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Financial Data](#financial-data)
-- [Deploy Your Own](#deploy-your-own)
-
-## Features 🌟
-- [AI SDK](https://sdk.vercel.ai/docs)
-  - Unified API for generating text, structured objects, and tool calls with LLMs
-  - Hooks for building dynamic chat and generative user interfaces
-  - Supports OpenAI (default), Anthropic, Cohere, and other model providers
-- [Financial Datasets API](https://financialdatasets.ai)
-  - Access to real-time and historical stock market data
-  - Data is optimized for AI financial agents
-  - 30+ years of financial data with 100% market coverage
-  - Documentation available [here](https://docs.financialdatasets.ai)
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
-
-
-## Setup 🛠️
-
-```bash
+Tabela de Conteúdo 📖
+Recursos
+Configuração
+Uso
+Dados Financeiros
+Implemente Sua Própria Versão
+Recursos 🌟
+AI SDK
+API unificada para geração de texto, objetos estruturados e chamadas de ferramentas com LLMs.
+Hooks para construir interfaces de chat e geração dinâmicas.
+Suporte a OpenAI (padrão), Anthropic, Cohere e outros provedores de modelos.
+Financial Datasets API
+Acesso a dados do mercado de ações em tempo real e históricos.
+Dados otimizados para agentes financeiros de IA.
+Cobertura total do mercado com mais de 30 anos de dados financeiros.
+Documentação disponível aqui.
+shadcn/ui
+Estilização com Tailwind CSS.
+Componentes primitivos do Radix UI para acessibilidade e flexibilidade.
+Configuração 🛠️
+bash
+Copiar
+Editar
 git clone https://github.com/virattt/ai-financial-agent.git
 cd ai-financial-agent
-```
+Se você não possui o npm instalado, faça o download aqui.
 
-> If you do not have npm installed, please install it from [here](https://nodejs.org/en/download/).
-
-1. Install pnpm (if not already installed):
-```bash
+Instale o pnpm (caso ainda não esteja instalado):
+bash
+Copiar
+Editar
 npm install -g pnpm
-```
-
-2. Install dependencies:
-```bash
+Instale as dependências:
+bash
+Copiar
+Editar
 pnpm install
-```
-
-3. Set up your environment variables:
-```bash
-# Create .env file for your API keys
+Configure suas variáveis de ambiente:
+bash
+Copiar
+Editar
+# Crie um arquivo .env para suas chaves de API
 cp .env.example .env
-```
+Defina as chaves de API no arquivo .env:
 
-Set the API keys in the .env file:
-```
-# Get your OpenAI API key from https://platform.openai.com/
-OPENAI_API_KEY=your-openai-api-key
+makefile
+Copiar
+Editar
+# Obtenha sua chave de API OpenAI em https://platform.openai.com/
+OPENAI_API_KEY=sua-chave-de-api-openai
 
-# Get your Financial Datasets API key from https://financialdatasets.ai/
-FINANCIAL_DATASETS_API_KEY=your-financial-datasets-api-key
+# Obtenha sua chave de API Financial Datasets em https://financialdatasets.ai/
+FINANCIAL_DATASETS_API_KEY=sua-chave-de-api-financial-datasets
 
-# Get your LangSmith API key from https://smith.langchain.com/
-LANGCHAIN_API_KEY=your-langsmith-api-key
+# Obtenha sua chave de API LangSmith em https://smith.langchain.com/
+LANGCHAIN_API_KEY=sua-chave-de-api-langsmith
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=ai-financial-agent
-```
+Nota: Não comprometa o arquivo .env no repositório, pois ele expõe segredos que permitem a outros acessar suas contas de OpenAI e provedores de autenticação.
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
+Se desejar implantar sua própria versão do Agente Financeiro de IA em produção, você precisará vincular sua instância local às contas do Vercel e GitHub.
 
-If you want to deploy your own version of the AI Financial Agent in production, you need to link your local instance with your Vercel and GitHub accounts.
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+Instale o CLI do Vercel: npm i -g vercel
+Vincule a instância local às contas do Vercel e GitHub (cria o diretório .vercel): vercel link
+Baixe suas variáveis de ambiente: vercel env pull
+Uso 🎮
+Após concluir as etapas acima, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
-## Usage 🎮
-
-After completing the steps above, simply run the following command to start the development server:
-```bash
+bash
+Copiar
+Editar
 pnpm dev
-```
+O template do seu app estará rodando em localhost:3000.
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+Dados Financeiros
+Este template utiliza a Financial Datasets API como provedora de dados financeiros. A API é projetada especificamente para agentes financeiros de IA e LLMs.
 
-## Financial Data
+A Financial Datasets API fornece dados do mercado de ações em tempo real e históricos, cobrindo 100% do mercado dos EUA nos últimos 30 anos.
 
-This template uses the [Financial Datasets API](https://financialdatasets.ai) as the financial data provider.  The Financial Datasets API is specifically designed for AI financial agents and LLMs.
+Os dados incluem demonstrações financeiras, preços de ações, dados de opções, transações de insiders, propriedade institucional e muito mais. Você pode saber mais sobre a API na documentação aqui.
 
-The Financial Datasets API provides real-time and historical stock market data and covers 100% of the US market over the past 30 years.  
+Nota: Os dados são gratuitos para AAPL, GOOGL, MSFT, NVDA e TSLA.
 
-Data includes financial statements, stock prices, options data, insider trades, institutional ownership, and much more.  You can learn more about the API via the documentation [here](https://docs.financialdatasets.ai).
+Se não quiser usar a Financial Datasets API, é fácil alternar para outro provedor de dados modificando algumas linhas de código.
 
-> Note: Data is free for AAPL, GOOGL, MSFT, NVDA, and TSLA.
-
-If you do not want to use the Financial Datasets API, you can easily switch to another data provider by modifying a few lines of code.
-
-## Deploy Your Own 🚀
-
-You can deploy your own version of the AI Financial Agent in production via Vercel with one click:
+Implemente Sua Própria Versão 🚀
+Você pode implantar sua própria versão do Agente Financeiro de IA em produção pelo Vercel com um clique:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvirattt%2Fai-financial-agent&env=AUTH_SECRET,OPENAI_API_KEY&envDescription=Learn%20more%20about%20how%20to%20get%20the%20API%20Keys%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fvercel%2Fai-financial-agent%2Fblob%2Fmain%2F.env.example&demo-title=AI%20Financial%20Agent&demo-description=An%20open-source%20financial%20agent%20chat%20template%20built%20with%20the%20AI%20SDK%20by%20Vercel%20and%20Financial%20Datasets%20API.&demo-url=https%3A%2F%2Fchat.vercel.ai&stores=[{%22type%22:%22postgres%22},{%22type%22:%22blob%22}])
 
