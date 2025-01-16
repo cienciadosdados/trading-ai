@@ -1,5 +1,4 @@
 # AI Trading Agent 🤖
-# Agente de Negociação com IA 🤖
 
 Este é um agente financeiro de IA como prova de conceito. O objetivo deste projeto é explorar o uso de IA para pesquisa de investimentos. Este projeto é destinado apenas para **fins educacionais** e não é indicado para negociações ou investimentos reais.
 
